@@ -13,4 +13,9 @@ objects = response.get('Contents', [])
 print(objects)
 
 #s3_client.download_file('transfer-siu-images', 'bobr.jpg', 'downloaded_bobr.jpg')
-s3_client.download_file('transfer-siu-images', 'info.txt', 'downloaded_info.txt')
+#s3_client.download_file('transfer-siu-images', 'info.txt', 'downloaded_info.txt')
+
+s3_client.put_bucket_versioning(
+    Bucket='my-girl-images', 
+    VersioningConfiguration={'Status': 'Enabled'}
+)
