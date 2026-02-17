@@ -19,3 +19,11 @@ s3_client.put_bucket_versioning(
     Bucket='transfer-siu-images', 
     VersioningConfiguration={'Status': 'Enabled'}
 )
+
+response = s3_client.list_object_versions(
+    Bucket='transfer-siu-images',
+    Prefix='info.txt'
+)
+
+for version in response.get('Versions'):
+    print(version)
