@@ -12,4 +12,5 @@ response = s3_client.list_objects_v2(Bucket='transfer-siu-images')
 objects = response.get('Contents', [])
 print(objects)
 
-s3_client.download_file('transfer-siu-images', 'bobr.jpg', 'downloaded_bobr.jpg')
+#s3_client.download_file('transfer-siu-images', 'bobr.jpg', 'downloaded_bobr.jpg')
+s3_client.download_file('transfer-siu-images', 'info.txt', 'downloaded_info.txt')
