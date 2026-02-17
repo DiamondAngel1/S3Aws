@@ -7,3 +7,7 @@ s3_client = boto3.client('s3')
 response = s3_client.list_buckets()
 for bucket in response['Buckets']:
     print(bucket)
+
+response = s3_client.list_objects_v2(Bucket='transfer-siu-images')
+objects = response.get('Contents', [])
+print(objects)

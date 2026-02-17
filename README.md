@@ -43,3 +43,15 @@ pip freeze > requirements.txt
 python main.py
 python3 main.py
 ```
+
+# Clone and run projecct
+```
+git clone https://github.com/DiamondAngel1/S3Aws.git
+cd S3Aws
+apt install python3.12-venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install "boto3[crt]"
+python3 main.py
+```
