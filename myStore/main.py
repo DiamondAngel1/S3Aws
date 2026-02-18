@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os
 import subprocess
 import boto3
@@ -8,7 +7,7 @@ from datetime import datetime
 DB_CONTAINER = "postgres"   # ім'я контейнера
 DB_NAME = "mydb"
 DB_USER = "postgres"
-S3_BUCKET = "my-backup-bucket"
+S3_BUCKET = "transfer-siu-images"
 BACKUP_DIR = "/tmp"
 
 # Формуємо ім'я файлу
